@@ -1,4 +1,4 @@
-# freedom_hotel_SPK
+## Projek Mata Kuliah Sistem Pendukung Keputusan
 Sistem Pendukung Keputusan Pemilihan Hotel di Jakarta
 
 Group: Freedom
