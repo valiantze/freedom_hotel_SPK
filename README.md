@@ -1,6 +1,6 @@
-## Projek Mata Kuliah Sistem Pendukung Keputusan
-### Sistem Pendukung Keputusan Pemilihan Hotel di Jakarta
-#### UKRIDA 2022
+# Projek Mata Kuliah Sistem Pendukung Keputusan
+## Sistem Pendukung Keputusan Pemilihan Hotel di Jakarta
+### Informatika UKRIDA
 
 Group: Freedom
 Member: 
