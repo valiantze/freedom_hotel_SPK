@@ -17,29 +17,36 @@
 
 include "globals.mzn"; 
 
-int: jlh_hotel = 12; 
+%int: jlh_hotel = 12; 
 
-enum Nama_Hotel = {Ciputra,Pullman,GreenTropic,MenaraPeninsula,TwinPlaza,Santika,GrandTjokro,Mercure,Ibis,Jayakarta,Capitol,RoyalRegal};
-enum golongan = {Bintang_1,Bintang_2,Bintang_3,Bintang_4,Bintang_5};
-enum jenis = {Hotel_Bintang,Hotel_Melati,Motel};
+%enum Nama_Hotel = {Ciputra,Pullman,GreenTropic,MenaraPeninsula,TwinPlaza,Santika,GrandTjokro,Mercure,Ibis,Jayakarta,Capitol,RoyalRegal};
+%enum golongan = {Bintang_1,Bintang_2,Bintang_3,Bintang_4,Bintang_5};
+%enum jenis = {Hotel_Bintang,Hotel_Melati,Motel};
 
 %Array untuk menyimpan Dataset
-array[1..jlh_hotel,1..5] of int: hotel = array2d(Nama_Hotel,1..5, 
-[
-Ciputra          ,Bintang_1 ,Hotel_Bintang ,100, 100000,
-Pullman          ,Bintang_2 ,Hotel_Melati  ,100, 200000,
-GreenTropic      ,Bintang_3 ,Hotel_Melati  ,100, 300000,
-MenaraPeninsula  ,Bintang_4 ,Hotel_Bintang ,100, 400000,
-TwinPlaza        ,Bintang_5 ,Hotel_Melati  ,200, 500000,
-Santika          ,Bintang_1 ,Hotel_Bintang ,200, 600000,
-GrandTjokro      ,Bintang_2 ,Hotel_Melati  ,200, 700000,
-Mercure          ,Bintang_3 ,Hotel_Melati  ,200, 800000,
-Ibis             ,Bintang_4 ,Hotel_Bintang ,300, 900000,
-Jayakarta        ,Bintang_5 ,Hotel_Melati  ,300, 1000000,
-Capitol          ,Bintang_1 ,Hotel_Melati  ,300, 2000000,
-RoyalRegal       ,Bintang_2 ,Hotel_Bintang ,300, 3000000,
-]);
+%array[1..jlh_hotel,1..5] of int: hotel = array2d(Nama_Hotel,1..5, 
+%[
+%Ciputra          ,Bintang_1 ,Hotel_Bintang ,100, 100000,
+%Pullman          ,Bintang_2 ,Hotel_Melati  ,100, 200000,
+%GreenTropic      ,Bintang_3 ,Hotel_Melati  ,100, 300000,
+%MenaraPeninsula  ,Bintang_4 ,Hotel_Bintang ,100, 400000,
+%TwinPlaza        ,Bintang_5 ,Hotel_Melati  ,200, 500000,
+%Santika          ,Bintang_1 ,Hotel_Bintang ,200, 600000,
+%GrandTjokro      ,Bintang_2 ,Hotel_Melati  ,200, 700000,
+%Mercure          ,Bintang_3 ,Hotel_Melati  ,200, 800000,
+%Ibis             ,Bintang_4 ,Hotel_Bintang ,300, 900000,
+%Jayakarta        ,Bintang_5 ,Hotel_Melati  ,300, 1000000,
+%Capitol          ,Bintang_1 ,Hotel_Melati  ,300, 2000000,
+%RoyalRegal       ,Bintang_2 ,Hotel_Bintang ,300, 3000000,
+%]);
 
+int: jlh_hotel;
+
+enum Nama_Hotel;
+enum golongan;
+enum jenis;
+
+array[1..jlh_hotel,1..5] of int: hotel;
 
 % Set Statistik Harga Terendah, Tertinggi dan Harga Rata2
 var int: Hrg_Tertinggi = max([hotel[p,5] | p in Nama_Hotel]);
@@ -47,8 +54,8 @@ var int: Hrg_Terendah = min([hotel[p,5] | p in Nama_Hotel]);
 var int: Hrg_Rata2 = sum([hotel[p,5] | p in Nama_Hotel]) div jlh_hotel ;
 
 % Define User Input
-int: userinput_hrg_mahal;
-int: userinput_hrg_murah;
+int: userinput_hrg_mahal = 1000000;
+int: userinput_hrg_murah = 1000000;
 
 % Set Harga Hotel Termahal (Diatas Input User)
 var set of Nama_Hotel: nama_hotel_termahal = { p | p in Nama_Hotel where hotel[p,5] >= userinput_hrg_mahal };
