@@ -1,0 +1,22 @@
+jlh_hotel = 12; 
+
+Nama_Hotel = {Ciputra,Pullman,GrandTropic,MenaraPeninsula,TwinPlaza,Santika,GrandTjokro,Mercure,Ibis,Jayakarta,Capitol,RoyalRegal};
+golongan = {Bintang_1,Bintang_2,Bintang_3,Bintang_4,Bintang_5};
+jenis = {Hotel_Bintang,Hotel_Melati,Motel};
+
+% array hotel
+hotel = array2d(Nama_Hotel,1..5, 
+[
+Ciputra          ,Bintang_1 ,Hotel_Bintang ,333, 100000,
+Pullman          ,Bintang_3 ,Hotel_Bintang ,317, 200000,
+GrandTropic      ,Bintang_4 ,Hotel_Bintang ,195, 300000,
+MenaraPeninsula  ,Bintang_4 ,Hotel_Bintang ,211, 400000,
+TwinPlaza        ,Bintang_4 ,Hotel_Bintang ,200, 500000,
+Santika          ,Bintang_1 ,Hotel_Bintang ,200, 600000,
+IbisSlipi        ,Bintang_3 ,Hotel_Bintang ,338, 700000,
+Mercure          ,Bintang_4 ,Hotel_Bintang ,200, 800000,
+Ibis             ,Bintang_4 ,Hotel_Bintang ,300, 900000,
+Jayakarta        ,Bintang_4 ,Hotel_Bintang ,300, 1000000,
+HotelAstika      ,Bintang_2 ,Hotel_Bintang ,153, 2000000,
+RoyalRegal       ,Bintang_2 ,Hotel_Bintang ,180, 3000000,
+]);
